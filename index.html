@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip calculator app</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>TIP CALCULATOR</h1>
+    </div>
+    <section class='section-center'>
+
+      <div class="left">
+
+        <label for="bill"><small class="bill-label">Bill</small></label>
+        <input type="number" id="bill" placeholder="0">
+        <small>Select tip %</small>
+        <div class="tip-container">
+          <div class="btn-container">
+            <button type="button" value=0.05 class="tip-btn">5%</button>
+          </div>
+
+          <div class="btn-container">
+            <button type="button" value=0.1 class="tip-btn">10%</button>
+          </div>
+
+          <div class="btn-container">
+            <button type="button" value=0.15 class="tip-btn">15%</button>
+          </div>
+
+          <div class="btn-container">
+            <button type="button" value=0.25 class="tip-btn">25%</button>
+          </div>
+
+          <div class="btn-container">
+            <button type="button" value=0.50 class="tip-btn">50%</button>
+          </div>
+
+          <input name="custom" class="custom-btn" placeholder="custom">
+        </div>
+        <label for="people">
+          <small class="people-label">number of people <span class="error-message">can't be 0</span></small>
+
+        </label>
+        <input type="number" name="people" id="people" placeholder="0">
+      </div>
+
+      <div class='right'>
+
+        <div class='total-container'>
+          <p>Total Amount <br> <span id="person">/person</span> </p> <span class="total tip-amount">$0.00</span>
+        </div>
+
+        <div class="total-container">
+          <p>Total <br> <span id="person">/person</span> </p> <span class="total total-amount">$0.00</span>
+        </div>
+
+        <button type="reset" class="reset">Reset</button>
+      </div>
+
+    </section>
+
+    <div class="attribution">
+      <p>DONE BY AJJ</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+::before,
+::after,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* variables */
+:root {
+  --cian: rgb(38, 192, 171);
+  --dark-cyan: hsl(183, 100%, 15%);
+  --grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --border-radius: 0.5rem;
+  --transition: all 0.2s ease-in-out;
+  --box-shadow: 0 4px 6px -1px rgba(38, 192, 171, 0.1),
+    0 2px 4px -1px rgba(38, 192, 171, 0.06);
+}
+
+body {
+  background-color: yellow;
+  font-family: "Space Mono", sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.section-center {
+  background-color: green;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.left,
+.right {
+  min-width: 100%;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.right {
+  background-color: blue;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.total-container > p {
+  text-align: left;
+  color: var(--white);
+}
+#person {
+  color: white;
+  font-weight: 500;
+}
+.total {
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+}
+.left {
+  border-radius: var(--border-radius);
+  padding: 2rem;
+}
+
+#bill {
+  margin-top: 0;
+  width: 100%;
+  background-position: left;
+  padding: 0.25rem;
+  background-position: 1rem 1rem;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: end;
+  margin-bottom: 0.5rem;
+}
+#bill:focus,
+#people:focus {
+  border: 1px solid var(--cian);
+  box-shadow: var(--box-shadow);
+}
+#bill,
+#people {
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  padding: 0.5rem;
+  background-color: var(--grayish-cyan);
+  border: none;
+  font-family: "Space Mono";
+  font-size: 24px;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.tip-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.tip-btn,
+.custom-btn {
+  background-color: blue;
+  padding: 0.5rem 0.125rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  outline: none;
+  color: var(--white);
+}
+
+.tip-btn:active,
+.custom-btn:active {
+  background-color: green;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.tip-btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 0, 0.548);
+  color: var(--dark-cyan);
+}
+.custom-btn {
+  text-align: right;
+  background-color: var(--grayish-cyan);
+  color: var(--dark-cyan);
+}
+.custom-btn:focus {
+  border: 2px solid var(--cian);
+  box-shadow: var(--box-shadow);
+}
+small {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+#people {
+  background-repeat: no-repeat;
+  background-position: 1rem 1rem;
+  background-color: var(--grayish-cyan);
+  text-align: right;
+}
+.reset {
+  min-width: 100%;
+  padding: 1rem 1.5rem;
+  margin-top: auto;
+  background-color: green;
+  border-radius: var(--border-radius);
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: yellow;
+}
+.btn-active {
+  background-color: white;
+}
+.people-label {
+  display: flex;
+  justify-content: space-between;
+}
+.error-message {
+  display: none;
+  color: red;
+  text-align: right;
+  font-weight: 900;
+  word-spacing: 2px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1120px) {
+  .section-center {
+    grid-template-columns: repeat(2, 1fr);
+    width: 75vw;
+  }
+
+  .container {
+    max-height: 90vh;
+  }
+  .tip-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 836px) {
+  .section-center {
+    grid-template-columns: repeat(2, 1fr);
+    width: 75vw;
+  }
+  .container {
+    max-height: 70vh;
+  }
+}
